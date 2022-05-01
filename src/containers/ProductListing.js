@@ -19,7 +19,6 @@ const ProductPage = () => {
   };
 
   useEffect(() => {
-  //  dispatch(fetchProducts()) ;
   fetchProducts()
   }, []);
 

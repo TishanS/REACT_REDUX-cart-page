@@ -12,9 +12,7 @@ const ProductDetails = () => {
   const { productId }  = useParams();
 
   let product = useSelector((state) => state.product);
-
   const { image, title, price, category, description } = product;
-
   const dispatch = useDispatch();
 
   const fetchProductDetail = async (id) => {
@@ -26,11 +24,8 @@ const ProductDetails = () => {
     dispatch(selectedProduct(response.data));
   };
 
-
-
   useEffect(() => {
     if (productId && productId !== "") fetchProductDetail(productId);
-    // if (productId && productId !== "") dispatch(fetchProduct(productId));
     return () => {
       dispatch(removeSelectedProduct());
     };

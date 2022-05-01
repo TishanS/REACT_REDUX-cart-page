@@ -1,6 +1,5 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Routes, Route } from "react-router-dom";
-
 import ProductListing from "./containers/ProductListing";
 import Header from "./containers/Header";
 import "./App.css";
@@ -13,11 +12,8 @@ function App() {
       
         <Header />
         <Routes>
-        {/* <Switch> */}
           <Route path="/" exact element={<ProductListing/>} />
           <Route path="/product/:productId" exact element={<ProductDetails/>} />
-          <Route>404 Not Found!</Route>
-        {/* </Switch> */}
         </Routes>
       </Router>
     </div>
